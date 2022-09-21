@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        .container{
+            background-color: orange;
+            text-align: center;
+        }
+        h1{
+            padding: 100px 0;
+            font-size: 50px;
+            color: #fff;
+            margin: 0;
+        }
+        .row.a2{
+            width: calc(100%/2);
+            background-color: black;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid container wide">
+        <div class="row">
+            <h1 class="col">Column 1</h1>
+            <h1 class="col">Column 2</h1>
+            <h1 class="col">Column 3</h1>
+        </div>
+
+        </div>
+    </div>
+</body>
+</html>

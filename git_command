@@ -1,0 +1,37 @@
+1. Cài đặt Git bao gồm git GUI và git Bash.!
+2. Tạo tài khoản github.!
+3. Mở git Bash bằng chuột phải (tại bất cứ đâu trên pc)
+- gõ câu lệnh: git config --list
+để mở list của config
+- gõ câu lệnh: git config --global user.name "Tien Viet"
+để lưu tên của mình
+- gõ câu lệnh: git config --global user.email 
+"viettienvu.97@gmail.com"
+để lưu email của mình
+- gõ lại câu lệnh --list để xem thay đổi.
+
+4. Clone 1 project có sẵn
+- zo github chọn button Code màu xanh, copy đoạn mã https
+- Vào thư mục muốn lưu project, phải chuột git bash here
+- gõ: git clone paste đường link_https đã copy
+-> done
+
+5. Tạo 1 project trên github
+- Repositories các thứ, đặt tên
+- Link project về máy bằng _4.
+- Sau khi link thì làm việc với project, thêm sửa xoá
+- Đẩy file lên git bằng các dòng lệnh
+- git status : kiểm tra trạng thái file (đỏ là mới)
+- git add .  : add tất cả file -> (xanh lá)
+- git commit -m "nội dung" - tạo nội dung commit
+- git push origin main : đẩy file lên git
+
+5. Tạo project local và đẩy lên github
+- Repositories các thứ, đặt tên
+- Vào thư mục chứa code mở git bash
+- git init  : tạo ra 1 thư mục .git bên trong folder
+- git status
+- git add . 
+- git commit -m "nội dung"
+- git remote add origin link-https (copy khi tạo repo mới)
+- git push origin master

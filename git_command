@@ -35,3 +35,4 @@
 - git commit -m "nội dung"
 - git remote add origin link-https (copy khi tạo repo mới)
 - git push origin master
+- hehe

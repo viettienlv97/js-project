@@ -1,10 +1,12 @@
-/* Set class grid cho content */
+/* Trước khi dùng bắt buộc phải box-sizing: border-box */
+/* Set class grid cho content, thông thường là full width */
 .grid {
     width: 100%;
     display: block;
     padding: 0;
 }
-/* 2 class bắt buộc có để grid content trong 1200px */
+/* 2 class bắt buộc có để grid content trong 1200px
+    nếu không có wide sẽ là layout full màn */
 .grid.wide {
     max-width: 1200px;
     margin: 0 auto;
@@ -16,7 +18,7 @@
     margin-left: -4px;
     margin-right: -4px;
 }
-/* Loại bỏ phần margin bên ngoài hàng */
+/* Tạm thời chưa dùng */
 .row.no-gutters {
     margin-left: 0;
     margin-right: 0;
@@ -26,7 +28,7 @@
     padding-left: 4px;
     padding-right: 4px;
 }
-/* Loại bỏ phần ngăn cách giữa các cột */
+/* Tạm thời chưa dùng */
 .row.no-gutters .col {
     padding-left: 0;
     padding-right: 0;
@@ -54,44 +56,44 @@
 }
 /* c-4 để cột có kích thước 4/12 */
 .c-4 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
+    flex: 0 0 calc(100%/3);
+    max-width: calc(100%/3);
 }
 /* c-5 để cột có kích thước 5/12 */
 .c-5 {
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%;
+    flex: 0 0 calc(100%/12*5);
+    max-width: calc(100%/12*5);
 }
 /* c-6 để cột có kích thước 6/12 */
 .c-6 {
-    flex: 0 0 50%;
+    flex: 0 0 calc(100%/2);
     max-width: calc(100%/2);
 }
 /* c-7 để cột có kích thước 7/12 */
 .c-7 {
-    flex: 0 0 58.33333%;
-    max-width: 58.33333%;
+    flex: 0 0 calc(100%/12*7);
+    max-width: calc(100%/12*7);
 }
 /* c-8 để cột có kích thước 8/12 */
 .c-8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%;
+    flex: 0 0 calc(100%/12*8);
+    max-width: calc(100%/12*8);
 }
 /* c-9 để cột có kích thước 9/12 */
 .c-9 {
-    flex: 0 0 75%;
-    max-width: 75%;
+    flex: 0 0 calc(100%/12*9);
+    max-width: calc(100%/12*9);
 }
 /* c-10 để cột có kích thước 10/12 */
 .c-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%;
+    flex: 0 0 calc(100%/12*10);
+    max-width: calc(100%/12*10);
 }
 /* c-11 để cột có kích thước 11/12 */
 
 .c-11 {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
+    flex: 0 0 calc(100%/12*11);
+    max-width: calc(100%/12*11);
 }
 /* c-12 để cột có kích thước 12/12 */
 .c-12 {
@@ -100,47 +102,47 @@
 }
 /* Tạo khoảng hở bên trái bằng 1/12 */
 .c-o-1 {
-    margin-left: 8.33333%;
+    margin-left: calc(100%/12);
 }
 /* Tạo khoảng hở bằng 2/12 */
 .c-o-2 {
-    margin-left: 16.66667%;
+    margin-left: calc(100%/12*2);
 }
 /* Tạo khoảng hở bằng 3/12 */
 .c-o-3 {
-    margin-left: 25%;
+    margin-left: calc(100%/4);
 }
 /* Tạo khoảng hở bằng 4/12 */
 .c-o-4 {
-    margin-left: 33.33333%;
+    margin-left: calc(100%/12*4);
 }
 /* Tạo khoảng hở bằng 5/12 */
 .c-o-5 {
-    margin-left: 41.66667%;
+    margin-left: calc(100%/12*5);
 }
 /* Tạo khoảng hở bằng 6/12 */
 .c-o-6 {
-    margin-left: 50%;
+    margin-left: calc(100%/12*6);
 }
 /* Tạo khoảng hở bằng 7/12 */
 .c-o-7 {
-    margin-left: 58.33333%;
+    margin-left: calc(100%/12*7);
 }
 /* Tạo khoảng hở bằng 8/12 */
 .c-o-8 {
-    margin-left: 66.66667%;
+    margin-left: calc(100%/12*8);
 }
 /* Tạo khoảng hở bằng 9/12 */
 .c-o-9 {
-    margin-left: 75%;
+    margin-left: calc(100%/12*9);
 }
 
 .c-o-10 {
-    margin-left: 83.33333%;
+    margin-left: calc(100%/12*10);
 }
 
 .c-o-11 {
-    margin-left: 91.66667%;
+    margin-left: calc(100%/12*11);
 }
 
 /* >= Tablet */
@@ -175,58 +177,58 @@
     }
 
     .m-1 {
-        flex: 0 0 8.33333%;
-        max-width: 8.33333%;
+        flex: 0 0 calc(100%/12);
+        max-width: calc(100%/12);
     }
 
     .m-2 {
-        flex: 0 0 16.66667%;
-        max-width: 16.66667%;
+        flex: 0 0 calc(100%/12*2);
+        max-width: calc(100%/12*2);
     }
 
     .m-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 calc(100%/4);
+        max-width: calc(100%/4);
     }
 
     .m-4 {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
+        flex: 0 0 calc(100%/12*4);
+        max-width: calc(100%/12*4);
     }
 
     .m-5 {
-        flex: 0 0 41.66667%;
-        max-width: 41.66667%;
+        flex: 0 0 calc(100%/12*5);
+        max-width: calc(100%/12*5);
     }
 
     .m-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(100%/12*6);
+        max-width: calc(100%/12*6);
     }
 
     .m-7 {
-        flex: 0 0 58.33333%;
-        max-width: 58.33333%;
+        flex: 0 0 calc(100%/12*7);
+        max-width: calc(100%/12*7);
     }
 
     .m-8 {
-        flex: 0 0 66.66667%;
-        max-width: 66.66667%;
+        flex: 0 0 calc(100%/12*8);
+        max-width: calc(100%/12*8);
     }
 
     .m-9 {
-        flex: 0 0 75%;
-        max-width: 75%;
+        flex: 0 0 calc(100%/12*9);
+        max-width: calc(100%/12*9);
     }
 
     .m-10 {
-        flex: 0 0 83.33333%;
-        max-width: 83.33333%;
+        flex: 0 0 calc(100%/12*10);
+        max-width: calc(100%/12*10);
     }
 
     .m-11 {
-        flex: 0 0 91.66667%;
-        max-width: 91.66667%;
+        flex: 0 0 calc(100%/12*11);
+        max-width: calc(100%/12*11);
     }
 
     .m-12 {
@@ -235,47 +237,47 @@
     }
 
     .m-o-1 {
-        margin-left: 8.33333%;
+        margin-left: calc(100%/12);
     }
 
     .m-o-2 {
-        margin-left: 16.66667%;
+        margin-left: calc(100%/12*2);
     }
 
     .m-o-3 {
-        margin-left: 25%;
+        margin-left: calc(100%/4);
     }
 
     .m-o-4 {
-        margin-left: 33.33333%;
+        margin-left: calc(100%/12*4);
     }
 
     .m-o-5 {
-        margin-left: 41.66667%;
+        margin-left: calc(100%/12*5);
     }
 
     .m-o-6 {
-        margin-left: 50%;
+        margin-left: calc(100%/12*6);
     }
 
     .m-o-7 {
-        margin-left: 58.33333%;
+        margin-left: calc(100%/12*7);
     }
 
     .m-o-8 {
-        margin-left: 66.66667%;
+        margin-left: calc(100%/12*8);
     }
 
     .m-o-9 {
-        margin-left: 75%;
+        margin-left: calc(100%/12*9);
     }
 
     .m-o-10 {
-        margin-left: 83.33333%;
+        margin-left: calc(100%/12*10);
     }
 
     .m-o-11 {
-        margin-left: 91.66667%;
+        margin-left: calc(100%/12*11);
     }
 }
 
@@ -330,55 +332,55 @@
         flex: 0 0 calc(100%/6);
         max-width: calc(100%/6);
     }
-
+    
     .l-2-4 {
         flex: 0 0 20%;
         max-width: 20%;
     }
 
     .l-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 calc(100%/4);
+        max-width: calc(100%/4);
     }
 
     .l-4 {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
+        flex: 0 0 calc(100%/12*4);
+        max-width: calc(100%/12*4);
     }
 
     .l-5 {
-        flex: 0 0 41.66667%;
-        max-width: 41.66667%;
+        flex: 0 0 calc(100%*5/12);
+        max-width: calc(100%/12*5);
     }
 
     .l-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(100%/12*6);
+        max-width: calc(100%/12*6);
     }
 
     .l-7 {
-        flex: 0 0 58.33333%;
-        max-width: 58.33333%;
+        flex: 0 0 calc(100%/12*7);
+        max-width: calc(100%/12*7);
     }
 
     .l-8 {
-        flex: 0 0 66.66667%;
-        max-width: 66.66667%;
+        flex: 0 0 calc(100%/12*8);
+        max-width: calc(100%/12*8);
     }
 
     .l-9 {
-        flex: 0 0 75%;
-        max-width: 75%;
+        flex: 0 0 calc(100%/12*9);
+        max-width: calc(100%/12*9);
     }
 
     .l-10 {
-        flex: 0 0 83.33333%;
-        max-width: 83.33333%;
+        flex: 0 0 calc(100%/12*10);
+        max-width: calc(100%/12*10);
     }
 
     .l-11 {
-        flex: 0 0 91.66667%;
-        max-width: 91.66667%;
+        flex: 0 0 calc(100%/12*11);
+        max-width: calc(100%/12*11);
     }
 
     .l-12 {
@@ -387,47 +389,47 @@
     }
 
     .l-o-1 {
-        margin-left: 8.33333%;
+        margin-left: calc(100%/12);
     }
 
     .l-o-2 {
-        margin-left: 16.66667%;
+        margin-left: calc(100%/12*2);
     }
 
     .l-o-3 {
-        margin-left: 25%;
+        margin-left: calc(100%/4);
     }
 
     .l-o-4 {
-        margin-left: 33.33333%;
+        margin-left: calc(100%/12*4);
     }
 
     .l-o-5 {
-        margin-left: 41.66667%;
+        margin-left: calc(100%/12*5);
     }
 
     .l-o-6 {
-        margin-left: 50%;
+        margin-left: calc(100%/12*6);
     }
 
     .l-o-7 {
-        margin-left: 58.33333%;
+        margin-left: calc(100%/12*7);
     }
 
     .l-o-8 {
-        margin-left: 66.66667%;
+        margin-left: calc(100%/12*8);
     }
 
     .l-o-9 {
-        margin-left: 75%;
+        margin-left: calc(100%/12*9);
     }
 
     .l-o-10 {
-        margin-left: 83.33333%;
+        margin-left: calc(100%/12*10);
     }
 
     .l-o-11 {
-        margin-left: 91.66667%;
+        margin-left: calc(100%/12*11);
     }
 }
 
@@ -485,13 +487,13 @@
     }
 
     .wide .l-1 {
-        flex: 0 0 8.33333%;
-        max-width: 8.33333%;
+        flex: 0 0 calc(100%/12);
+        max-width: calc(100%/12);
     }
 
     .wide .l-2 {
-        flex: 0 0 16.66667%;
-        max-width: 16.66667%;
+        flex: 0 0 calc(100%/12*2);
+        max-width: calc(100%/12*2);
     }
 
     .wide .l-2-4 {
@@ -500,48 +502,48 @@
     }
 
     .wide .l-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 calc(100%/4);
+        max-width: calc(100%/4);
     }
 
     .wide .l-4 {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
+        flex: 0 0 calc(100%/12*4);
+        max-width: calc(100%/12*4);
     }
 
     .wide .l-5 {
-        flex: 0 0 41.66667%;
-        max-width: 41.66667%;
+        flex: 0 0 calc(100%/12*5);
+        max-width: calc(100%/12*5);
     }
 
     .wide .l-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(100%/12*6);
+        max-width: calc(100%/12*6);
     }
 
     .wide .l-7 {
-        flex: 0 0 58.33333%;
-        max-width: 58.33333%;
+        flex: 0 0 calc(100%/12*7);
+        max-width: calc(100%/12*7);
     }
 
     .wide .l-8 {
-        flex: 0 0 66.66667%;
-        max-width: 66.66667%;
+        flex: 0 0 calc(100%/12*8);
+        max-width: calc(100%/12*8);
     }
 
     .wide .l-9 {
-        flex: 0 0 75%;
-        max-width: 75%;
+        flex: 0 0 calc(100%/12*9);
+        max-width: calc(100%/12*9);
     }
 
     .wide .l-10 {
-        flex: 0 0 83.33333%;
-        max-width: 83.33333%;
+        flex: 0 0 calc(100%/12*10);
+        max-width: calc(100%/12*10);
     }
 
     .wide .l-11 {
-        flex: 0 0 91.66667%;
-        max-width: 91.66667%;
+        flex: 0 0 calc(100%/12*11);
+        max-width: calc(100%/12*11);
     }
 
     .wide .l-12 {
@@ -550,46 +552,46 @@
     }
 
     .wide .l-o-1 {
-        margin-left: 8.33333%;
+        margin-left: calc(100%/12);
     }
 
     .wide .l-o-2 {
-        margin-left: 16.66667%;
+        margin-left: calc(100%/12*2);
     }
 
     .wide .l-o-3 {
-        margin-left: 25%;
+        margin-left: calc(100%/4);
     }
 
     .wide .l-o-4 {
-        margin-left: 33.33333%;
+        margin-left: calc(100%/12*4);
     }
 
     .wide .l-o-5 {
-        margin-left: 41.66667%;
+        margin-left: calc(100%/12*5);
     }
 
     .wide .l-o-6 {
-        margin-left: 50%;
+        margin-left: calc(100%/12*6);
     }
 
     .wide .l-o-7 {
-        margin-left: 58.33333%;
+        margin-left: calc(100%/12*7);
     }
 
     .wide .l-o-8 {
-        margin-left: 66.66667%;
+        margin-left: calc(100%/12*8);
     }
 
     .wide .l-o-9 {
-        margin-left: 75%;
+        margin-left: calc(100%/12*9);
     }
 
     .wide .l-o-10 {
-        margin-left: 83.33333%;
+        margin-left: calc(100%/12*10);
     }
 
     .wide .l-o-11 {
-        margin-left: 91.66667%;
+        margin-left: calc(100%/12*11);
     }
 }
